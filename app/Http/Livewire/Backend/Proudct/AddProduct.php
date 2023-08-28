@@ -14,13 +14,10 @@ class AddProduct extends Component
     public $thumbnail;
     public $multiple_image = [];
     public $state = [];
-    public $iteration = 0;
 
 
     public function create()
     {
-        $this->emit('hide-form', ['message' => 'Product created successfully']);
-        
         $validateData = Validator::make($this->state, [
             'category_id' => 'required|integer',
             'name' => 'required|string|max:256',
@@ -59,8 +56,6 @@ class AddProduct extends Component
     }
     public function render()
     {
-        $this->emit('selectionData');
-        $this->iteration++;
         $data['categories'] = Category::orderBy('name', 'ASC')->get();
         return view('livewire.backend.proudct.add-product', $data)->layout('backend.layouts.master');
     }

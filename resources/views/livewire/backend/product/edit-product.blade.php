@@ -1,4 +1,4 @@
-<div>
+<div >
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -29,7 +29,8 @@
                                         <div class="form-group">
                                             <label>Select Category</label>
                                             <div wire:ignore>
-                                                <select class="form-control select2 prefix-picture" id="category_id"
+                                                <select class="form-control select2 prefix-picture"
+                                                    wire:model.defer="state.category_id" id="category_id"
                                                     style="width: 100%;" data-placeholder="Select Category">
                                                     <option selected="selected" data-picture="">Select Category</option>
                                                     @foreach ($categories as $category)
@@ -242,6 +243,7 @@
                 });
             });
         </script>
+
     @endpush
 
 </div>

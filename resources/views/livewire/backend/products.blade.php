@@ -52,7 +52,7 @@
                                             <td>
                                                 <a href="{{ url('detail/'. $product->id) }}"
                                                     class="btn btn-success">Details</a>
-                                                <a href="" wire:click.prevent="edit({{ $product }})"
+                                                <a href="{{ url('edit-product/'. $product->id) }}"
                                                     class="btn btn-success">Edit</a>
                                                 <a href="" wire:click.prevent="delete({{ $product }})"
                                                     id="delete" class="btn btn-danger">Delete</a>

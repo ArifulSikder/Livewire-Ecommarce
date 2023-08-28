@@ -12,8 +12,8 @@
             $('.select2').select2({
                 placeholder: function() {
                     $(this).data('placeholder');
-                    theme: 'bootstrap4'
-                }
+                },
+                theme: 'bootstrap4'
             });
 
             function dataPhoto(icon) {

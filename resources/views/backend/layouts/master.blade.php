@@ -102,6 +102,13 @@
         });
     </script>
    
+   <script>
+    //for update
+    Livewire.on('selectPlease',() => {
+            console.log('sdfhodis');
+       
+    });
+</script>
     @stack('js')
 </body>
 
