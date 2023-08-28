@@ -1,0 +1,26 @@
+@import "public/frontend/vendor/bootstrap/css/bootstrap.min.css";
+
+@import "public/frontend/fonts/font-awesome-4.7.0/css/font-awesome.min.css";
+
+@import "public/frontend/fonts/iconic/css/material-design-iconic-font.min.css";
+
+@import "public/frontend/fonts/linearicons-v1.0.0/icon-font.min.css";
+
+@import "public/frontend/vendor/animate/animate.css";
+
+@import "public/frontend/vendor/css-hamburgers/hamburgers.min.css";
+
+@import "public/frontend/vendor/animsition/css/animsition.min.css";
+
+@import "public/frontend/vendor/select2/select2.min.css";
+
+@import "public/frontend/vendor/daterangepicker/daterangepicker.css";
+
+@import "public/frontend/vendor/slick/slick.css";
+
+@import "public/frontend/vendor/MagnificPopup/magnific-popup.css";
+
+@import "public/frontend/vendor/perfect-scrollbar/perfect-scrollbar.css";
+
+@import "public/frontend/css/util.css";
+@import "public/frontend/css/main.css";
