@@ -141,6 +141,9 @@
         Livewire.on("order_done", () => {
             swal("Your Order Is Completed", "success");
         });
+        Livewire.on("addToCart", () => {
+            swal("Added to the cart.", "success");
+        });
     </script>
 
     @stack('js')

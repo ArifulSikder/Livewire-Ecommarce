@@ -8,30 +8,7 @@ use Livewire\Component;
 
 class Products extends Component
 {   
-    public $quantity = 1;
 
-    public function decrease()
-    {
-        $this->quantity--;
-    }
-    public function increase()
-    {
-        $this->quantity++;
-    }
-
-    public function addToCart(Product $product)
-    {
-        
-        Cart::add([
-            'id' => $product->id,
-            'name' => $product->name,
-            'qty' => $this->quantity,
-            'price' => $product->sales_price,
-            'thumbnail' => $product->thumbnail,
-        ]);
-        $this->quantity = 1;
-        $this->emit('count');
-    }
     public function openModal($product_id)
     {
         $this->emit('openQuickModal', $product_id);
