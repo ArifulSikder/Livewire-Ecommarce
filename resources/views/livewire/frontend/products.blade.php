@@ -51,7 +51,7 @@
                         <div class="row">
                             <div class="col-md-6 col-lg-7 p-b-30">
                                 <div class="p-l-25 p-r-30 p-lr-0-lg">
-                                    <div class="wrap-slick3 flex-sb flex-w">
+                                    <div class="wrap-slick3 flex-sb flex-w"  wire:ignore>
                                         <div class="wrap-slick3-dots"></div>
                                         <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
 

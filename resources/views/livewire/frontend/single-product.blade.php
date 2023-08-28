@@ -20,18 +20,18 @@
 
 
     <!-- Product Detail -->
-    <section class="sec-product-detail bg0 p-t-65 p-b-60">
+    <section class="sec-product-detail bg0 p-t-65 p-b-60" wire:ignore.self>
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-7 p-b-30">
                     <div class="p-l-25 p-r-30 p-lr-0-lg">
-                        <div class="wrap-slick3 flex-sb flex-w">
+                        <div class="wrap-slick3 flex-sb flex-w"  wire:ignore>
                             <div class="wrap-slick3-dots"></div>
                             <div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
 
                             <div class="slick3 gallery-lb">
                                 @foreach (json_decode($product->multiple_image, true) as $photo)
-                                    <div class="item-slick3" data-thumb="{{ Storage::disk('uploads')->url($photo) }}">
+                                    <div class="item-slick3"  data-thumb="{{ Storage::disk('uploads')->url($photo) }}">
                                         <div class="wrap-pic-w pos-relative">
                                             <img src="{{ Storage::disk('uploads')->url($photo) }}" alt="IMG-PRODUCT">
 
