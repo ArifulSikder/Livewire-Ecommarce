@@ -1,6 +1,6 @@
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="public/full site.png" width="400" alt="Laravel Logo"></a></p>
 
-## About Laravel And PHP Version
+## About Laravel, Livewire And PHP Version
 
 
 -   [Laravel Version 9.19](https://laravel.com/docs/routing).
