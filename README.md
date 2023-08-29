@@ -30,7 +30,7 @@ For run your project simply run the following command.
 
 Opps! You got some database related errors. You you need to make database connection. Connect to the database and from the projects main directory, there is a folder called "sql". From this folder import database called "data.sql".
 
-Now, you must notice that the style file and css file is not working properly. For solve this issue, run the following command.
+Now, you must notice that the style file(css) and js file is not working properly. For solve this issue, run the following command.
 
     npm run dev
 
