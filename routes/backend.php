@@ -15,7 +15,7 @@ Route::get('/dashboard', DashboardController::class)->name('dashboard');
 Route::get('/category', Category::class)->name('category');
 Route::get('/banner', Banner::class)->name('banner');
 Route::get('/add-product', AddProduct::class)->name('add-product');
-Route::get('/edit-product/{product_id}', EditProduct::class)->name('edit-product');
+Route::get('/edit-product/{product_id}', EditProduct::class)->name('edit-product', 'product_id');
 Route::get('/products', Products::class)->name('products');
 Route::get('/detail/{product}', Details::class)->name('detail');
 Route::get('/variants', Varients::class)->name('variants');

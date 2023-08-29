@@ -1,4 +1,4 @@
-<div >
+<div>
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
@@ -23,7 +23,7 @@
                     <div class="card" wire:ignore.self>
                         <div class="card-header">Add Product Form</div>
                         <div class="card-body">
-                            <form action="" wire:submit.prevent='create' id="addForm">
+                            <form action="" wire:submit.prevent='editForm' id="editForm">
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -122,7 +122,7 @@
                                         <div class="form-group">
                                             <label>Select Color</label>
                                             <div wire:ignore>
-                                                <select class="form-control select2" id="color_id" style="width: 100%;"
+                                                <select class="form-control select2"   wire:model.defer="state.color_id"  id="color_id" style="width: 100%;"
                                                     data-placeholder="Select Color">
                                                     <option value="">Select Color</option>
                                                     <option value="1">Red</option>
@@ -138,7 +138,7 @@
                                         <div class="form-group">
                                             <label>Select Size</label>
                                             <div wire:ignore>
-                                                <select class="form-control select2" id="size_id"
+                                                <select class="form-control select2" id="size_id"   wire:model.defer="state.size_id"
                                                     style="width: 100%;" data-placeholder="Select Size">
                                                     <option value="">Select Size</option>
                                                     <option value="1">M</option>
@@ -223,7 +223,7 @@
     @push('js')
         <script>
             $(document).ready(function() {
-                $('#addForm').on("submit", function(e) {
+                $('#editForm').on("submit", function(e) {
                     @this.set('state.category_id', $('#category_id').val(), true);
                     @this.set('state.color_id', $('#color_id').val(), true);
                     @this.set('state.size_id', $('#size_id').val(), true);
@@ -244,6 +244,13 @@
             });
         </script>
 
+        {{-- <script>
+            //for update
+            Livewire.on('selectPlease', () => {
+                console.log('sdfhodis');
+
+            });
+        </script> --}}
     @endpush
 
 </div>

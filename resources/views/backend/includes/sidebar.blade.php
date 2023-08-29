@@ -53,8 +53,8 @@
             </ul>
           </li>
       
-          <li class="nav-item {{ request()->is('category', 'products', 'add-product','detail*', 'banner') ? "menu-open" : '' }}">
-            <a href="#" class="nav-link {{ request()->is('category', 'products', 'add-product','detail*', 'banner') ? "active" : '' }}">
+          <li class="nav-item {{ request()->is('category', 'products', 'add-product','detail*', 'banner','edit-product*') ? "menu-open" : '' }}">
+            <a href="#" class="nav-link {{ request()->is('category', 'products', 'add-product','detail*', 'banner','edit-product*') ? "active" : '' }}">
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Product Managements
@@ -81,7 +81,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('products') }}" class="nav-link {{ request()->is('products','detail*') ? "active" : '' }}">
+                <a href="{{ route('products') }}" class="nav-link {{ request()->is('products','detail*','edit-product*') ? "active" : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Products</p>
                 </a>
