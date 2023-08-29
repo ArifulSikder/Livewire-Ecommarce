@@ -54,9 +54,9 @@ class EditProduct extends Component
         $validateData['multiple_image'] = json_encode($this->multiple_image);
         // $validateData['color_id'] = json_encode($validateData['color_id']);
         // $validateData['size_id'] = json_encode($validateData['size_id']);
-
-        $product = $this->product->update($validateData);
-        if ($product) {
+        
+        $uploaded = Product::findOrFail($this->product_id)->update($validateData);
+        if ($uploaded) {
             $this->emit('hide-form', ['message' => 'Product Updated successfully']);
             return redirect('/products');
         }

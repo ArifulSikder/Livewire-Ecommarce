@@ -63,6 +63,9 @@
                                 </tbody>
                             </table>
                         </div>
+                        <div>
+                            {{ $products->links() }}
+                        </div>
                     </div>
                 </div><!--/. container-fluid -->
             </section>
