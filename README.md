@@ -26,7 +26,7 @@ And also
 
 For run your project simply run the following command.
 
-    php artisan server
+    php artisan serve
 
 Opps! You got some database related errors. You you need to make database connection. Connect to the database and from the projects main directory, there is a folder called "sql". From this folder import database called "data.sql".
 
