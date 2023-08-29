@@ -36,7 +36,7 @@ Now, you must notice that the style file(css) and js file is not working properl
 
 Thats it your livewire project is working fine without any loading issues. Just single page application.
 
-Now, If you want to login the admin panel, just the the endpoint of login. And Your credentials are below:
+Now, If you want to login the admin panel, visit the endpoint of login. And Your credentials are below:
 
     Email: admin@gmail.com
     Password: 12345678
