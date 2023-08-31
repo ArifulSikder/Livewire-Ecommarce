@@ -26,6 +26,13 @@ class Cart extends Component
         $this->contents = MyCart::content();
     }
 
+    public function removeFromCart($product_id)
+    {
+        MyCart::remove($product_id);
+        $this->contents = MyCart::content();
+        $this->emit('count');
+        $this->emit('myCart');
+    }
     public function checkout()
     {
         $validateData = Validator::make($this->state, [

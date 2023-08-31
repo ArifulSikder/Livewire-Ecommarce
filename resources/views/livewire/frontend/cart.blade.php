@@ -34,7 +34,7 @@
                                 @forelse ($contents as $item)
 								<tr class="table_row">
 									<td class="column-1">
-										<div class="how-itemcart1">
+										<div class="how-itemcart1" wire:click.prevent="removeFromCart({{ $item['id'] }})">
 											<img src="{{ Storage::disk('uploads')->url( $item['thumbnail'] ) }}" alt="IMG">
 										</div>
 									</td>
