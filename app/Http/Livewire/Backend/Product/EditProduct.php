@@ -66,8 +66,8 @@ class EditProduct extends Component
     {
         $this->product = Product::findOrFail($this->product_id);
         $this->state = $this->product->toArray();
-        $this->emit('selectPlease');
         $this->iteration++;
+        $this->emit('selectPlease');
         $this->state['category_id'] = $this->product->category_id;
         
         $data['categories'] = Category::orderBy('name', 'ASC')->get();

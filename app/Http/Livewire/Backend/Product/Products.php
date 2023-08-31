@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Livewire\Backend;
+namespace App\Http\Livewire\Backend\Product;
 
 use App\Models\Product;
 use Livewire\Component;
@@ -15,6 +15,6 @@ class Products extends Component
     public function render()
     {
         $data['products'] = Product::latest()->paginate(10);
-        return view('livewire.backend.products', $data)->layout('backend.layouts.master');
+        return view('livewire.backend.product.products', $data)->layout('backend.layouts.master');
     }
 }

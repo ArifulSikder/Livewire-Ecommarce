@@ -3,11 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
 use App\Http\Livewire\Backend\Category;
+use App\Http\Livewire\Backend\Product\AddProduct;
 use App\Http\Livewire\Backend\Product\Banner;
 use App\Http\Livewire\Backend\Product\Details;
 use App\Http\Livewire\Backend\Product\EditProduct;
-use App\Http\Livewire\Backend\Products;
-use App\Http\Livewire\Backend\Proudct\AddProduct;
+use App\Http\Livewire\Backend\Product\Products;
 use App\Http\Livewire\Backend\Setting\Varients;
 use App\Http\Livewire\Backend\User\UserList;
 

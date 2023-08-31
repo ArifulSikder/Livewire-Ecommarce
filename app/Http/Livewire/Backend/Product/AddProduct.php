@@ -1,16 +1,16 @@
 <?php
 
-namespace App\Http\Livewire\Backend\Proudct;
+namespace App\Http\Livewire\Backend\Product;
 
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Support\Facades\Validator;
 use Livewire\Component;
-use Livewire\WithFileUploads;
+use Livewire\WithPagination;
 
 class AddProduct extends Component
 {
-    use WithFileUploads;
+    use WithPagination;
     public $thumbnail;
     public $multiple_image = [];
     public $state = [];
@@ -57,6 +57,6 @@ class AddProduct extends Component
     public function render()
     {
         $data['categories'] = Category::orderBy('name', 'ASC')->get();
-        return view('livewire.backend.proudct.add-product', $data)->layout('backend.layouts.master');
+        return view('livewire.backend.product.add-product', $data)->layout('backend.layouts.master');
     }
 }
