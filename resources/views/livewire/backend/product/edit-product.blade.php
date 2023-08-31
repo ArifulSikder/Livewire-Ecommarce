@@ -95,10 +95,9 @@
                                                     </label>
                                                 </div>
                                             </div>
-                                            @if ($thumbnail)
-                                                <img width="200px" src="{{ $thumbnail->temporaryUrl() }}"
-                                                    alt="">
-                                            @endif
+                                            <img width="200px"
+                                                src="{{ $thumbnail ? $thumbnail->temporaryUrl() : Storage::disk('uploads')->url($product->thumbnail) }}"
+                                                alt="">
 
 
                                             @error('thumbnail')
@@ -122,8 +121,8 @@
                                         <div class="form-group">
                                             <label>Select Color</label>
                                             <div wire:ignore>
-                                                <select class="form-control select2"   wire:model.defer="state.color_id"  id="color_id" style="width: 100%;"
-                                                    data-placeholder="Select Color">
+                                                <select class="form-control select2" wire:model.defer="state.color_id"
+                                                    id="color_id" style="width: 100%;" data-placeholder="Select Color">
                                                     <option value="">Select Color</option>
                                                     <option value="1">Red</option>
                                                     <option value="2">Green</option>
@@ -138,8 +137,9 @@
                                         <div class="form-group">
                                             <label>Select Size</label>
                                             <div wire:ignore>
-                                                <select class="form-control select2" id="size_id"   wire:model.defer="state.size_id"
-                                                    style="width: 100%;" data-placeholder="Select Size">
+                                                <select class="form-control select2" id="size_id"
+                                                    wire:model.defer="state.size_id" style="width: 100%;"
+                                                    data-placeholder="Select Size">
                                                     <option value="">Select Size</option>
                                                     <option value="1">M</option>
                                                     <option value="2">L</option>
@@ -209,6 +209,16 @@
                                                     @endif
                                                 @endforeach
                                             </div>
+                                        @else    
+                                        Photo Preview:
+                                        <div class="row">
+                                            @foreach (json_decode($product->multiple_image, true) as $image)
+                                                    <div class="col-3 card me-1 mb-1">
+                                                        <img src="{{ Storage::disk('uploads')->url($image) }}">
+                                                    </div>
+                                            @endforeach
+                                        </div>
+
                                         @endif
                                     </div>
                                 </div>

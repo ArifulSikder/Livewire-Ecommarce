@@ -41,21 +41,25 @@ class EditProduct extends Component
             // 'thumbnail' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
         ])->validate();
 
-        $photoUrl = '';
+        $photoUrl = $this->product->thumbnail;
         if ($this->thumbnail) {
             $photoUrl = $this->thumbnail->store('/', 'uploads');
         }
         $validateData['thumbnail'] = $photoUrl;
 
-        foreach ($this->multiple_image as $key => $image) {
-            $this->multiple_image[$key] = $image->store('/', 'uploads');
+        if ($this->multiple_image) {
+            foreach ($this->multiple_image as $key => $image) {
+                $this->multiple_image[$key] = $image->store('/', 'uploads');
+            }
+            $validateData['multiple_image'] = json_encode($this->multiple_image);
+        } else {
+            $validateData['multiple_image'] = $this->product->multiple_image;
         }
 
-        $validateData['multiple_image'] = json_encode($this->multiple_image);
         // $validateData['color_id'] = json_encode($validateData['color_id']);
         // $validateData['size_id'] = json_encode($validateData['size_id']);
         
-        $uploaded = Product::findOrFail($this->product_id)->update($validateData);
+        $uploaded = $this->product->update($validateData);
         if ($uploaded) {
             $this->emit('hide-form', ['message' => 'Product Updated successfully']);
             return redirect('/products');
