@@ -8,7 +8,7 @@
 -   [Livewire 2](https://laravel-livewire.com/docs/2.x/quickstart).
 
 ## How to clone.
-Just copy the following command and past into you terminal.
+Just copy the following command and past into your terminal.
 
     $ git clone https://github.com/ArifulSikder/Livewire-Ecommarce.git
 
