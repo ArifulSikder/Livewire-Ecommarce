@@ -11,7 +11,20 @@ class Products extends Component
     use WithPagination;
 
     protected $paginationTheme = 'bootstrap';
+    protected $listeners = ['confirmDelete'];
+    public $product;
 
+    public function delete(Product $product)
+    {
+        $this->product = $product;
+        $this->emit('delete');
+    }
+
+    
+    public function confirmDelete()
+    {
+        $this->product->delete();
+    }
     public function render()
     {
         $data['products'] = Product::latest()->paginate(10);
