@@ -4,7 +4,7 @@
 
 
 -   [Laravel Version 9.19](https://laravel.com/docs/routing).
--   [PHP Version 8.28](https://laravel.com/docs/container).
+-   [PHP Version 8.0.28](https://laravel.com/docs/container).
 -   [Livewire 2](https://laravel-livewire.com/docs/2.x/quickstart).
 
 ## How to clone.
